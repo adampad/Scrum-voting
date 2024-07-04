@@ -3,7 +3,8 @@
   "scripts": {
     "start": "npx hardhat node",
     "compile": "npx hardhat compile",
-    "deploy": "npx hardhat ignition deploy ./ignition/modules/Lottery.ts --network localhost"
+    "predeploy": "npm run build",
+    "deploy": "npx hardhat ignition deploy ./ignition/modules/Lottery.ts --network localhost && gh-pages -d build"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
