@@ -1,12 +1,15 @@
 {
   "name": "frontend",
   "version": "1.0.0",
+  "homepage": "https://adampad.github.io/Scrum-voting",
   "main": "expo/AppEntry.js",
   "scripts": {
     "start": "npm run web",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@expo/metro-runtime": "^3.2.1",
@@ -29,6 +32,7 @@
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "@types/react": "~18.2.45",
     "@types/web3": "^1.2.2",
+    "gh-pages": "^6.1.1",
     "hardhat": "^2.22.5",
     "typescript": "^5.1.3"
   },
